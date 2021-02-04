@@ -1,0 +1,14 @@
+{
+  "name": "la-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Tomoya113/la-portfolio",
+  "author": "Tomoya Tanaka <tomoya113.code@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
