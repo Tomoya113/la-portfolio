@@ -1,3 +1,71 @@
+:root {
+  --size: 1;
+  --background: #091833;
+  --color1: #EA00D9;
+  --color2: #defe47;
+  --color3: #13F700;
+  --color4: #00F1F7;
+}
+
+@font-face {
+  font-family: "PixelMplus12-Regular";
+  src:  url("../fonts/PixelMplus12-Regular.ttf") format("ttf"),
+  url("../fonts/PixelMplus12-Bold.ttf") format("ttf")
+}
+
 body {
-  background: black;
+  background: var(--background);
+  font-family: "PixelMplus12-Regular";
+  color: #fafafa;
+}
+
+.card-visual-visual {
+  position: relative;
+  width: 800px;
+  height: 392px;
+  background: linear-gradient(
+    to right,
+    var(--color1),
+    var(--color2),
+    var(--color3),
+    var(--color4)
+  );
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.card-visual-visual::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  background: linear-gradient(
+    to right,
+    var(--color1),
+    var(--color2),
+    var(--color3),
+    var(--color4)
+  );
+  filter: blur(6px);
+  transition: filter 1s;
+}
+
+.card-visual-visual:hover:after {
+  filter: blur(20px);
+}
+
+.card-visual-wrapper {
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  border-radius: 15px;
+}
+
+p {
+  margin: 0;
+  padding: 8px;
 }
