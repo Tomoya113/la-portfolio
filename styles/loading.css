@@ -6,7 +6,8 @@
   width: 100%;
   min-height: 100vh;
   background-color: #091833;
-  transition: all 0.5s;
+  transition: opacity 2s;
+  opacity: 1;
   position: fixed;
   top: 0;
   left: 0;
