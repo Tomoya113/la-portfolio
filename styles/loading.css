@@ -1,0 +1,106 @@
+#loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #091833;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+section .spinner {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  animation: opacity 3s linear;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+
+section .spinner span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg);
+  animation: rotate 2.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  animation-delay: calc(0.1s * var(--i))
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  80%,100% {
+    transform: rotate(360deg)
+  }
+}
+
+section .spinner span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #EA00D9;
+  border-radius: 50%;
+  animation: animate 2.5s cubic-bezier(0.86, 0, 0.07, 1) infinite, change-color 7.5s steps(3) infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+} 
+
+@keyframes change-color {
+  0% {
+    background: #EA00D9;
+  }
+  50% {
+    background: #00F1F7;
+  }
+  75% {
+    background: #13F700;
+  }
+}
+
+.guide {
+  position: absolute;
+  width: 1px;
+  height: 100vh;
+}
