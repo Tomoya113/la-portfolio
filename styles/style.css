@@ -74,16 +74,30 @@ p {
   padding: 32px;
 }
 
+.wrapper {
+  transition: opacity 1s, filter 0.5s, border-top 1s, margin-left 1s;
+  padding: 8px 0px
+}
+
+.active-content {
+  opacity: 1 !important;
+  filter: drop-shadow(2px 2px 5px #fafafa);
+  border-top: solid 1px #fafafa;
+  border-bottom: solid 1px #fafafa;
+  margin-left: 20px;
+}
+
 .information-wrapper {
   width: 50%;
 }
 
 .name-wrapper {
   opacity: 0.5;
-  transition: opacity 1s;
 }
+
 .name-wrapper:hover {
   opacity: 1;
+  filter: drop-shadow(2px 2px 5px #fafafa);
 }
 
 .name {
@@ -97,11 +111,11 @@ p {
 .job-wrapper {
   margin-top: 24px;
   opacity: 0.5;
-  transition: opacity 1s;
 }
 
 .job-wrapper:hover {
   opacity: 1;
+  filter: drop-shadow(2px 2px 5px #fafafa);
 }
 
 .content {
@@ -111,11 +125,11 @@ p {
 .role-wrapper {
   margin-top: 24px;
   opacity: 0.5;
-  transition: opacity 1s;
 }
 
 .role-wrapper:hover {
   opacity: 1;
+  filter: drop-shadow(2px 2px 5px #fafafa);
 }
 
 .header {
@@ -147,6 +161,8 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: solid 1px #fafafa;
+  filter: drop-shadow(2px 2px 5px #fafafa);
 }
 
 .onhover {
