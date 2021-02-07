@@ -9,13 +9,15 @@ body {
 }
 
 .loader-container {
+  display: block;
   position: fixed;
   min-height: 100vh;
   width: 100%;
   background: #000;
   opacity: 1;
-  animation: wrapper-opacity 2.5s forwards;
+  animation: wrapper-opacity 1s forwards, visibility 1s forwards;
   z-index: 9999;
+  visibility: visible;
 }
 
 .loader-wrapper {
@@ -24,6 +26,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes visibility {
+  0% {
+    visibility: visible;
+    min-height: 100vh;
+  }
+  100% {
+    visibility: hidden;
+    min-height: 0vh;
+  }
 }
 
 @keyframes wrapper-opacity {
