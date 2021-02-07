@@ -26,6 +26,15 @@ p {
   margin: 0px;
 }
 
+.card {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .card-visual-visual {
   position: relative;
   width: 800px;
@@ -91,6 +100,7 @@ p {
 .active-content {
   opacity: 1 !important;
   border-bottom: solid 1px #fafafa;
+  filter: drop-shadow(0px 0px 5px var(--white));
   margin-left: 20px;
 }
 
@@ -193,6 +203,7 @@ p {
 }
 
 .recent-posts a:hover {
+  filter: drop-shadow(0px 0px 5px var(--white));
   opacity: 1;
 }
 

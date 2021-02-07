@@ -6,8 +6,6 @@ const profile = [
 ]
 
 window.onload = () => {
-  const spinner = document.getElementById('loading');
-  spinner.classList.add('loaded');
 
   const result = document.getElementsByClassName('wrapper');
   const elements = Array.from(result);
