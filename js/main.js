@@ -7,7 +7,7 @@ const profile = [
 
 window.onload = () => {
   const contentWrapper = document.getElementById('contents')
-  contentWrapper.style.visibility = "hidden"
+  contentWrapper.style.display = "none"
   const result = document.getElementsByClassName('wrapper');
   const elements = Array.from(result);
   elements.map( element => {
@@ -42,11 +42,10 @@ window.onload = () => {
         element.appendChild(content)
         element.setAttribute("href", post.url)
         contentWrapper[0].appendChild(element)
+        })
+      }).then( hoge => {
+        contentWrapper.style.display = "block"
       })
-      }).then(hoge => {
-        contentWrapper.style.visibility = "visible"
-        console.log('aa')
-    })
 
 
 }
