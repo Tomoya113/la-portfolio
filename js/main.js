@@ -6,7 +6,8 @@ const profile = [
 ]
 
 window.onload = () => {
-
+  const contentWrapper = document.getElementById('contents')
+  contentWrapper.style.visibility = "hidden"
   const result = document.getElementsByClassName('wrapper');
   const elements = Array.from(result);
   elements.map( element => {
@@ -43,6 +44,8 @@ window.onload = () => {
         contentWrapper[0].appendChild(element)
       })
     })
+
+    contentWrapper.style.visibility = "visible"
 }
 
 let active = e => {
