@@ -17,7 +17,8 @@
 body {
   background: var(--background);
   color: var(--white);
-  font-family: "PixelMplus12-Regular";
+  font-family: consolas;
+
 }
 
 p {
@@ -75,85 +76,37 @@ p {
 }
 
 .wrapper {
-  transition: opacity 1s, filter 0.5s, border-top 1s, margin-left 1s;
-  padding: 8px 0px
+  transition: opacity 0.3s, filter 0.5s, border-top 1s, margin-left 1s;
+  opacity: 0.5;
+}
+
+.wrapper:hover {
+  opacity: 1;
+}
+
+.wrapper:not(:nth-child(1)) {
+  margin-top: 24px;
 }
 
 .active-content {
   opacity: 1 !important;
-  filter: drop-shadow(2px 2px 5px #fafafa);
-  border-top: solid 1px #fafafa;
   border-bottom: solid 1px #fafafa;
   margin-left: 20px;
 }
 
 .information-wrapper {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
 
-.name-wrapper {
-  opacity: 0.5;
-}
-
-.name-wrapper:hover {
-  opacity: 1;
-  filter: drop-shadow(2px 2px 5px #fafafa);
-}
-
-.name {
-  font-size: 32px;
-}
-
-.name-aka {
-  font-size: 16px;
-}
-
-.job-wrapper {
-  margin-top: 24px;
-  opacity: 0.5;
-}
-
-.job-wrapper:hover {
-  opacity: 1;
-  filter: drop-shadow(2px 2px 5px #fafafa);
-}
-
-.content {
-  font-size: 24px;
-}
-
-.role-wrapper {
-  margin-top: 24px;
-  opacity: 0.5;
-}
-
-.role-wrapper:hover {
-  opacity: 1;
-  filter: drop-shadow(2px 2px 5px #fafafa);
+.information-wrapper .menu-bar {
+  flex-grow: 1;
 }
 
 .header {
   font-size: 32px;
 }
-
-.role {
-  font-size: 24px;
-}
-
-.course {
-  display: inline-block;
-  opacity: 0.5;
-  transition: opacity 0.5s;
-}
-
-.course:nth-child(2) {
-  margin-left: 1px;
-}
-
-.course:hover {
-  opacity: 1;
-}
-
 
 .image-wrapper {
   width: 50%;
@@ -168,9 +121,77 @@ p {
 .onhover {
   width: 100%;
   height: 100%;
-  /* transform: translate(-50px, -50px); */
   opacity: 0;
   animation: transform-image 0.5s linear forwards;
+}
+
+.content-wrapper {
+  position: relative;
+  width: 60%;
+  border: solid 1px white;
+  padding: 8px;
+}
+
+.content {
+  position: absolute;
+  transition: visibility 1s, opacity 1s;
+  visibility: hidden;
+}
+
+.profile h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile h1:not(:nth-child(1)) {
+  margin-top: 16px;
+}
+
+.skills p {
+  font-size: 24px;
+}
+
+.skills p:not(:nth-child(1)) {
+  padding-top: 24px;
+}
+
+.swift {
+  filter: drop-shadow(0px 0px 10px #F04C33);
+}
+
+.ruby {
+  filter: drop-shadow(0px 0px 10px #C41B31);
+}
+
+.react {
+  filter: drop-shadow(0px 0px 10px #5CD3F3);
+}
+
+.vue {
+  filter: drop-shadow(0px 0px 10px #3FB27F);
+}
+
+.typescript {
+  filter: drop-shadow(0px 0px 10px #0076C6);
+}
+
+.recent-posts {
+  visibility: hidden;
+}
+
+.recent-posts a {
+  display: block;
+  color: var(--white);
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.recent-posts a:hover {
+  opacity: 1;
+}
+
+.recent-posts a:not(:nth-child(1)) {
+  padding-top: 16px;
 }
 
 @keyframes transform-image {
@@ -184,14 +205,30 @@ p {
   }
 }
 
-.swift {
-  background: url("../images/swift.png") no-repeat center/contain;
-  filter: drop-shadow(10px 10px 10px #F04C33) invert(20%);
+.social-links {
+  display: flex;
 }
 
-.ruby {
-  background: url("../images/ruby.png") no-repeat center/contain;
-  filter: drop-shadow(10px 10px 10px #C41B31) invert(20%);
+.social-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
+  transition: filter 0.5s;
 }
+
+.social-link:not(:nth-child(1)) {
+  margin-left: 16px;
+}
+
+
+.github:hover {
+  filter: drop-shadow(0px 0px 5px var(--white));
+}
+
+.facebook:hover {
+  filter: drop-shadow(0px 0px 5px #3F65A6);
+}
+
+
 
 
