@@ -24,15 +24,6 @@ window.onload = () => {
     profileWrapper[0].appendChild(p)
   })
 
-  // const skillsWrapper = document.getElementsByClassName('skills')
-  // skills.map( skill => {
-  //   const img = document.createElement("img")
-  //   img.setAttribute("width", 24)
-  //   img.setAttribute("src", skill.url)
-  //   skillsWrapper[0].appendChild(img)
-  //   skillsWrapper[0].appendChild(document.createTextNode(skill.name))
-  // })
-
   // Recent postsのコンテンツ生成
   fetch('https://qiita.com/api/v2/authenticated_user/items?page=1&per_page=8', {
     method: 'GET',
@@ -43,7 +34,6 @@ window.onload = () => {
   })
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       const contentWrapper = document.getElementsByClassName('recent-posts')
       data.map( post => {
         const element = document.createElement("a")
