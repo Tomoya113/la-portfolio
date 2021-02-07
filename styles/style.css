@@ -128,9 +128,15 @@ p {
 .content-wrapper {
   position: relative;
   width: 60%;
-  border: solid 1px white;
+  border: solid 0px white;
   padding: 8px;
+  transition: all 1s;
 }
+
+.content-wrapper-active {
+  /* border: solid 0.5px white; */
+}
+
 
 .content {
   position: absolute;

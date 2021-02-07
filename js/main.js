@@ -58,6 +58,8 @@ window.onload = () => {
 }
 
 let active = e => {
+  const contentWrapper = document.getElementById('contents')
+  contentWrapper.classList.add('content-wrapper-active')
   const result = document.getElementsByClassName('wrapper')
   const elements = Array.from(result)
   elements.map( element => {
