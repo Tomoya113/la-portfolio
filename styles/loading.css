@@ -15,7 +15,7 @@ body {
   width: 100%;
   background: #000;
   opacity: 1;
-  animation: wrapper-opacity 1s forwards, visibility 1s forwards;
+  animation: wrapper-opacity 2s forwards, visibility 1s forwards;
   z-index: 9999;
   visibility: visible;
 }

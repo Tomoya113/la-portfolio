@@ -43,9 +43,12 @@ window.onload = () => {
         element.setAttribute("href", post.url)
         contentWrapper[0].appendChild(element)
       })
+      }).then(hoge => {
+        contentWrapper.style.visibility = "visible"
+        console.log('aa')
     })
 
-    contentWrapper.style.visibility = "visible"
+
 }
 
 let active = e => {

@@ -143,11 +143,6 @@ p {
   transition: all 1s;
 }
 
-.content-wrapper-active {
-  /* border: solid 0.5px white; */
-}
-
-
 .content {
   opacity: 0;
   position: absolute;
