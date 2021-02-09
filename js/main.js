@@ -23,6 +23,9 @@ window.onload = () => {
     p.appendChild(document.createTextNode(element.content))
     profileWrapper[0].appendChild(h1)
     profileWrapper[0].appendChild(p)
+    profileWrapper[0].style.transition = '1s'
+    profileWrapper[0].style.opacity = 0
+    profileWrapper[0].style.visibility = 'visible'
   })
 
   // Recent postsのコンテンツ生成
@@ -45,8 +48,11 @@ window.onload = () => {
         })
       }).then( hoge => {
         contentWrapper.style.display = "block"
+        profileWrapper[0].style.opacity = 1
       })
-
+      
+  document.getElementsByClassName('wrapper')[0].classList.add('active-content')
+  
 
 }
 

@@ -87,6 +87,7 @@ p {
 .wrapper {
   transition: opacity 0.3s, filter 0.5s, border-top 1s, margin-left 1s;
   opacity: 0.5;
+  width: 75%;
 }
 
 .wrapper:hover {
